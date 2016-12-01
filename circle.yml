@@ -14,7 +14,7 @@ test:
     - docker-compose run dockerapp python test.py
 
 deployment:
-  hub
+  hub:
     branch: [circle_ci_publish, master]
     commands:
       - docker login -e $DOCKER_HUB_EMAIL -u $DOCKER_HUB_USER_ID -p $DOCKER_HUB_PWD
